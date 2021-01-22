@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="Q1.css">
+        <title>Navbar</title>
+    </head>
+    <body>
+        <nav>
+            <div class="cName"><a href="#">NAVBAR</a></div>
+            <ul>
+                <li>
+                    <a href="#" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="#">Menu</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Contact Us</a>
+                </li>
+            </ul>
+            <div id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+        <!-- <script src="navbar.js"></script> -->
+        <script>
+            var burger=document.querySelector("#hamburger");
+            var menu=document.querySelector("ul");
+            burger.addEventListener("click",function(){
+                menu.classList.toggle("navActive");
+            });
+        </script>
+    </body>
+</html>
