@@ -50,7 +50,7 @@ nav{
     body{overflow-x: hidden;}
     ul{
         position: absolute;
-        right:0;
+        left:0;
         height:92vh;
         top:8vh;
         background-color: #191654;
@@ -59,7 +59,7 @@ nav{
         align-items:left;
         width:50%;
         transition: transform 0.45s ease-in;
-        transform: translateX(100%);
+        transform: translateX(-100%);
     }
     nav{
         justify-content: space-between;
