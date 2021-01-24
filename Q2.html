@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Display</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <style>
+            body{
+                font-family: 'Poppins', sans-serif;
+                margin:0;
+                font-size: 20px;
+            }
+            .Deco{
+                color:white;
+                text-align:center;
+                padding-top:25px;
+                background-image: linear-gradient(to bottom right,#42E695,#3BB2B8);
+                width:450px;
+                position: relative;
+                box-sizing: border-box;
+                border-radius: 0.75rem;
+                left:33%;
+                height: 75px;
+                margin: 15px 0 0 0;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var str="";
+            function isUpperCase(str) {
+                return str===str.toUpperCase();
+            }
+            function isLowerCase(str) {
+                return str===str.toLowerCase();
+            }
+            document.body.addEventListener("keyup",function(e){
+                if((isUpperCase(e.key))||isLowerCase(e.key)){
+                    str+=e.key;
+                    console.log(str);
+                    var nameIndex=str.search("TEDx");
+                    var name=str.substring(nameIndex,(nameIndex+4));
+                    if(nameIndex!=undefined && name==="TEDx"){
+                        var div1=document.createElement("DIV");
+                        div1.textContent="TEDxBITSPilani";
+                        div1.classList.add("Deco");
+                        document.body.appendChild(div1);
+                        str="";
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
